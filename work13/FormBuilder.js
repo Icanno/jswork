@@ -15,8 +15,8 @@
     };
     var builder = {
         toHTML: function(obj) {
-            var html = this.item[obj.tag](this.attr(obj.attr),obj.option);
-            return '<tr><th>' + obj.text + '</th></td>' + html + '</td></tr>';
+            var html = this.item[obj.tag](this.attr(obj.attr), obj.option);
+            return '<tr><th>' + obj.text + '</th><td>' + html + '</td></tr>';
         },
         attr: function(attr) {
             var html = '';
@@ -32,7 +32,7 @@
                     html += '<input ' + attr + '>';
                 }else{
                     for (var k in option) {
-                        html += '<label><input ' + attr + 'value="' + k + '"' + '>' + option[k] + '</label>';
+                        html += '<label><input ' + attr + 'value="'  + k + '"' + '>' + option[k] + '</label>';
                     }
                 }
                 return html;
@@ -42,7 +42,7 @@
                 for (var k in option) {
                     html += '<option value="' + k + '">' + option[k] + '</option>';
                 }
-                return '<select ' + attr +'>' + html + '</select>';
+                return '<select ' + attr +'>' + html + '<lect>';
             },
             textarea: function(attr) {
                 return '<textarea ' + attr + '></textarea>';

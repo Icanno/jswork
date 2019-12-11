@@ -1,7 +1,6 @@
 let endseconds = new Date().getTime() + 15 * 1000;
 let d = h = m = s = 0;
 let id = setInterval(seckill, 1000);
-
 function seckill() {
     let nowtime = new Date();
     let remaining = parseInt((endseconds - nowtime.getTime()) / 1000);
@@ -22,4 +21,4 @@ function seckill() {
          document.getElementById('h').innerHTML = h + '时';
          document.getElementById('m').innerHTML = m + '分';
          document.getElementById('s').innerHTML = s + '秒';
-}
+} 
